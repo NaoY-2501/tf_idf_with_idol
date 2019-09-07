@@ -1,0 +1,12 @@
+version: '2'
+services:
+    mecab-python:
+        build: .
+        volumes:
+            - ./code:/home/code
+            - ./output:/home/output
+        command: >
+          /bin/bash -c
+          "python3.7 -m pip install -U pip
+          && python3.7 -m pip install -r requirements_docker.txt
+          && python3.7 tf_idf_with_idol.py"
