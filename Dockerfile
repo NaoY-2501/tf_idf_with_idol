@@ -52,7 +52,7 @@ RUN rm -rf mecab-ipadic-neologd
 # Set mecab-ipadic-NEologd as default
 RUN sed -i 's/dicdir = \/var\/lib\/mecab\/dic\/debian/dicdir = \/usr\/lib\/x86_64-linux-gnu\/mecab\/dic\/mecab-ipadic-neologd/' /etc/mecabrc
 
-# Install Python packages
+# Make directory and Copy code
 WORKDIR /home
 RUN mkdir code
 RUN mkdir output
