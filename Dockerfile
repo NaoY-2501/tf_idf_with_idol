@@ -32,6 +32,7 @@ ENV LANGUAGE ja_JP.UTF-8
 ENV LC_ALL ja_JP.UTF-8
 
 # Install Python3.7
+# ref. https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/
 WORKDIR /usr/local/src
 RUN wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz \
   && tar -xf Python-3.7.3.tar.xz \
