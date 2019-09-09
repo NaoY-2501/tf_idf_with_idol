@@ -51,12 +51,6 @@ RUN rm -rf mecab-ipadic-neologd
 # Set mecab-ipadic-NEologd as default
 RUN sed -i 's/dicdir = \/var\/lib\/mecab\/dic\/debian/dicdir = \/usr\/lib\/x86_64-linux-gnu\/mecab\/dic\/mecab-ipadic-neologd/' /etc/mecabrc
 
-# Install fonts
-RUN wget -O IPAfont00303.zip https://ipafont.ipa.go.jp/old/ipafont/IPAfont00303.php \
-  && unzip IPAfont00303.zip \
-  && mv IPAfont00303 fonts \
-  && rm IPAfont00303.zip
-
 # Install Python packages
 WORKDIR /home
 RUN mkdir code
