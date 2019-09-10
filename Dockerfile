@@ -23,6 +23,7 @@ RUN apt update \
     gawk \
     sudo \
     unzip \
+    libbz2-dev \
     && apt clean \
     && update-locale LANG=ja_JP.UTF-8
 
