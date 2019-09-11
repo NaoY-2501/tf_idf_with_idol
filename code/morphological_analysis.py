@@ -16,8 +16,8 @@ def analysis(in_csv: str, out_csv: str):
                     result = node.feature.split(",")
                     pos = result[0]
                     lemma = result[-3]
-                    if pos in ['名詞', '動詞', '形容詞']:
+                    if pos == '名詞':
                         lemmas.append(lemma)
                     node = node.next
-                row = f"{row['date']},{row['title']},{','.join(lemmas)}\n"
+                row = f"{row['date']},{row['url']},{row['title']},{','.join(lemmas)}\n"
                 fout.write(row)
