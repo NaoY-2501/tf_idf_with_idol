@@ -104,5 +104,6 @@ ENV/
 *.csv
 
 # txt
-*.txt
+article_urls.txt
+
 
