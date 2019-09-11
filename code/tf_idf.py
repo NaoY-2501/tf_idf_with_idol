@@ -82,8 +82,8 @@ def get_tf_idf_df(in_csv: str, int2word: typing.Dict[int, str], tf_idf_array: np
 def show_result(df: pd.DataFrame):
     with open('result.txt', 'w', encoding='utf-8') as f:
         for key, row in df.iterrows():
-            top_15 = df.loc[key].sort_values(ascending=False)[:15]
-            f.write(f'{key}\n{top_15}\n{"="*100}\n')
+            top = df.loc[key].sort_values(ascending=False)[:20]
+            f.write(f'{key}\n{top}\n{"="*100}\n')
 
 
 def tf_idf(in_csv: str):
